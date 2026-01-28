@@ -15,7 +15,7 @@ models:
           - not_null
 
   - name: stg_events
-    description: "Atomic event logs of user interactions within the SyncFlow platform."
+    description: '{{ doc("pql_activation_logic") }}'
     columns:
       - name: event_id
         description: "Primary key for the event."

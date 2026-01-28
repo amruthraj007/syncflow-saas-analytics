@@ -3314,3 +3314,239 @@ KeyboardInterrupt
 [0m16:46:32.978011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA8A7CA950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA8A7CA750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA8A77BA70>]}
 [0m16:46:32.978432 [debug] [MainThread]: Flushing usage events
 [0m16:46:33.809714 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:59:57.572305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA0D2CD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA1E87ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA1E87B10>]}
+
+
+============================== 16:59:57.577387 | 70a276df-da4c-4961-aed5-09da58f9b668 ==============================
+[0m16:59:57.577387 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:59:57.578204 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs generate', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m16:59:57.871033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '70a276df-da4c-4961-aed5-09da58f9b668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA11BD220>]}
+[0m16:59:57.946086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '70a276df-da4c-4961-aed5-09da58f9b668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA1F8D370>]}
+[0m16:59:57.949024 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m16:59:58.356138 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m16:59:58.568131 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m16:59:58.568736 [debug] [MainThread]: Partial parsing: added file: syncflow_dbt://models\docs\syncflow_metrics.md
+[0m16:59:58.569503 [debug] [MainThread]: Partial parsing: updated file: syncflow_dbt://models\staging\stg_syncflow.yml
+[0m16:59:59.117846 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.syncflow_dbt.example
+[0m16:59:59.133486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '70a276df-da4c-4961-aed5-09da58f9b668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA33DBE50>]}
+[0m16:59:59.169642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '70a276df-da4c-4961-aed5-09da58f9b668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA37A1310>]}
+[0m16:59:59.170170 [info ] [MainThread]: Found 2 models, 11 data tests, 2 sources, 472 macros
+[0m16:59:59.170757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70a276df-da4c-4961-aed5-09da58f9b668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA363F150>]}
+[0m16:59:59.173295 [info ] [MainThread]: 
+[0m16:59:59.174044 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:59:59.174604 [info ] [MainThread]: 
+[0m16:59:59.175323 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:59:59.182721 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow_main'
+[0m16:59:59.304856 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m16:59:59.305273 [debug] [ThreadPool]: On list_syncflow_main: BEGIN
+[0m16:59:59.305596 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:59:59.324195 [debug] [ThreadPool]: SQL status: OK in 0.019 seconds
+[0m16:59:59.324670 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m16:59:59.325023 [debug] [ThreadPool]: On list_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "list_syncflow_main"} */
+select
+      'syncflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'syncflow'
+  
+[0m16:59:59.344023 [debug] [ThreadPool]: SQL status: OK in 0.019 seconds
+[0m16:59:59.346632 [debug] [ThreadPool]: On list_syncflow_main: ROLLBACK
+[0m16:59:59.347951 [debug] [ThreadPool]: Failed to rollback 'list_syncflow_main'
+[0m16:59:59.348331 [debug] [ThreadPool]: On list_syncflow_main: Close
+[0m16:59:59.350314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70a276df-da4c-4961-aed5-09da58f9b668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA3B50460>]}
+[0m16:59:59.355449 [debug] [Thread-3 (]: Began running node test.syncflow_dbt.source_not_null_syncflow_raw_raw_events_event_id.a3e5d3e4d0
+[0m16:59:59.356100 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.syncflow_dbt.source_not_null_syncflow_raw_raw_events_event_id.a3e5d3e4d0'
+[0m16:59:59.356571 [debug] [Thread-4 (]: Began running node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_email.96243b833f
+[0m16:59:59.357059 [debug] [Thread-1 (]: Began running node model.syncflow_dbt.stg_events
+[0m16:59:59.357464 [debug] [Thread-3 (]: Began compiling node test.syncflow_dbt.source_not_null_syncflow_raw_raw_events_event_id.a3e5d3e4d0
+[0m16:59:59.357927 [debug] [Thread-2 (]: Began running node model.syncflow_dbt.stg_users
+[0m16:59:59.358497 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_email.96243b833f'
+[0m16:59:59.359088 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_events'
+[0m16:59:59.376785 [debug] [Thread-3 (]: Writing injected SQL for node "test.syncflow_dbt.source_not_null_syncflow_raw_raw_events_event_id.a3e5d3e4d0"
+[0m16:59:59.377533 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_users'
+[0m16:59:59.378029 [debug] [Thread-4 (]: Began compiling node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_email.96243b833f
+[0m16:59:59.378549 [debug] [Thread-1 (]: Began compiling node model.syncflow_dbt.stg_events
+[0m16:59:59.379277 [debug] [Thread-2 (]: Began compiling node model.syncflow_dbt.stg_users
+[0m16:59:59.383537 [debug] [Thread-4 (]: Writing injected SQL for node "test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_email.96243b833f"
+[0m16:59:59.386461 [debug] [Thread-1 (]: Writing injected SQL for node "model.syncflow_dbt.stg_events"
+[0m16:59:59.389647 [debug] [Thread-2 (]: Writing injected SQL for node "model.syncflow_dbt.stg_users"
+[0m16:59:59.390396 [debug] [Thread-3 (]: Began executing node test.syncflow_dbt.source_not_null_syncflow_raw_raw_events_event_id.a3e5d3e4d0
+[0m16:59:59.391879 [debug] [Thread-3 (]: Finished running node test.syncflow_dbt.source_not_null_syncflow_raw_raw_events_event_id.a3e5d3e4d0
+[0m16:59:59.392404 [debug] [Thread-3 (]: Began running node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_user_id.64df6ef6ef
+[0m16:59:59.392876 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.syncflow_dbt.source_not_null_syncflow_raw_raw_events_event_id.a3e5d3e4d0, now test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_user_id.64df6ef6ef)
+[0m16:59:59.393283 [debug] [Thread-3 (]: Began compiling node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_user_id.64df6ef6ef
+[0m16:59:59.397242 [debug] [Thread-3 (]: Writing injected SQL for node "test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_user_id.64df6ef6ef"
+[0m16:59:59.398145 [debug] [Thread-4 (]: Began executing node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_email.96243b833f
+[0m16:59:59.398645 [debug] [Thread-1 (]: Began executing node model.syncflow_dbt.stg_events
+[0m16:59:59.399073 [debug] [Thread-2 (]: Began executing node model.syncflow_dbt.stg_users
+[0m16:59:59.399937 [debug] [Thread-4 (]: Finished running node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_email.96243b833f
+[0m16:59:59.400813 [debug] [Thread-1 (]: Finished running node model.syncflow_dbt.stg_events
+[0m16:59:59.401680 [debug] [Thread-2 (]: Finished running node model.syncflow_dbt.stg_users
+[0m16:59:59.402238 [debug] [Thread-3 (]: Began executing node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_user_id.64df6ef6ef
+[0m16:59:59.402723 [debug] [Thread-4 (]: Began running node test.syncflow_dbt.source_relationships_syncflow_raw_raw_events_user_id__user_id__source_syncflow_raw_raw_users_.37154e2a19
+[0m16:59:59.403269 [debug] [Thread-1 (]: Began running node test.syncflow_dbt.source_unique_syncflow_raw_raw_events_event_id.4073ee096c
+[0m16:59:59.403862 [debug] [Thread-2 (]: Began running node test.syncflow_dbt.source_unique_syncflow_raw_raw_users_user_id.1879d373ab
+[0m16:59:59.404721 [debug] [Thread-3 (]: Finished running node test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_user_id.64df6ef6ef
+[0m16:59:59.405264 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_email.96243b833f, now test.syncflow_dbt.source_relationships_syncflow_raw_raw_events_user_id__user_id__source_syncflow_raw_raw_users_.37154e2a19)
+[0m16:59:59.405727 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.syncflow_dbt.stg_events, now test.syncflow_dbt.source_unique_syncflow_raw_raw_events_event_id.4073ee096c)
+[0m16:59:59.406227 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.syncflow_dbt.stg_users, now test.syncflow_dbt.source_unique_syncflow_raw_raw_users_user_id.1879d373ab)
+[0m16:59:59.406711 [debug] [Thread-3 (]: Began running node test.syncflow_dbt.not_null_stg_events_event_id.715b3f7012
+[0m16:59:59.407151 [debug] [Thread-4 (]: Began compiling node test.syncflow_dbt.source_relationships_syncflow_raw_raw_events_user_id__user_id__source_syncflow_raw_raw_users_.37154e2a19
+[0m16:59:59.407681 [debug] [Thread-1 (]: Began compiling node test.syncflow_dbt.source_unique_syncflow_raw_raw_events_event_id.4073ee096c
+[0m16:59:59.408128 [debug] [Thread-2 (]: Began compiling node test.syncflow_dbt.source_unique_syncflow_raw_raw_users_user_id.1879d373ab
+[0m16:59:59.408652 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.syncflow_dbt.source_not_null_syncflow_raw_raw_users_user_id.64df6ef6ef, now test.syncflow_dbt.not_null_stg_events_event_id.715b3f7012)
+[0m16:59:59.418397 [debug] [Thread-4 (]: Writing injected SQL for node "test.syncflow_dbt.source_relationships_syncflow_raw_raw_events_user_id__user_id__source_syncflow_raw_raw_users_.37154e2a19"
+[0m16:59:59.425053 [debug] [Thread-1 (]: Writing injected SQL for node "test.syncflow_dbt.source_unique_syncflow_raw_raw_events_event_id.4073ee096c"
+[0m16:59:59.429545 [debug] [Thread-2 (]: Writing injected SQL for node "test.syncflow_dbt.source_unique_syncflow_raw_raw_users_user_id.1879d373ab"
+[0m16:59:59.430049 [debug] [Thread-3 (]: Began compiling node test.syncflow_dbt.not_null_stg_events_event_id.715b3f7012
+[0m16:59:59.435346 [debug] [Thread-3 (]: Writing injected SQL for node "test.syncflow_dbt.not_null_stg_events_event_id.715b3f7012"
+[0m16:59:59.436192 [debug] [Thread-4 (]: Began executing node test.syncflow_dbt.source_relationships_syncflow_raw_raw_events_user_id__user_id__source_syncflow_raw_raw_users_.37154e2a19
+[0m16:59:59.436902 [debug] [Thread-2 (]: Began executing node test.syncflow_dbt.source_unique_syncflow_raw_raw_users_user_id.1879d373ab
+[0m16:59:59.437820 [debug] [Thread-4 (]: Finished running node test.syncflow_dbt.source_relationships_syncflow_raw_raw_events_user_id__user_id__source_syncflow_raw_raw_users_.37154e2a19
+[0m16:59:59.438397 [debug] [Thread-1 (]: Began executing node test.syncflow_dbt.source_unique_syncflow_raw_raw_events_event_id.4073ee096c
+[0m16:59:59.439222 [debug] [Thread-3 (]: Began executing node test.syncflow_dbt.not_null_stg_events_event_id.715b3f7012
+[0m16:59:59.440035 [debug] [Thread-2 (]: Finished running node test.syncflow_dbt.source_unique_syncflow_raw_raw_users_user_id.1879d373ab
+[0m16:59:59.440510 [debug] [Thread-4 (]: Began running node test.syncflow_dbt.unique_stg_events_event_id.66ebb17438
+[0m16:59:59.441380 [debug] [Thread-1 (]: Finished running node test.syncflow_dbt.source_unique_syncflow_raw_raw_events_event_id.4073ee096c
+[0m16:59:59.442231 [debug] [Thread-3 (]: Finished running node test.syncflow_dbt.not_null_stg_events_event_id.715b3f7012
+[0m16:59:59.442740 [debug] [Thread-2 (]: Began running node test.syncflow_dbt.not_null_stg_users_email_domain.e7305991d5
+[0m16:59:59.443290 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.syncflow_dbt.source_relationships_syncflow_raw_raw_events_user_id__user_id__source_syncflow_raw_raw_users_.37154e2a19, now test.syncflow_dbt.unique_stg_events_event_id.66ebb17438)
+[0m16:59:59.443797 [debug] [Thread-1 (]: Began running node test.syncflow_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m16:59:59.444374 [debug] [Thread-3 (]: Began running node test.syncflow_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m16:59:59.444887 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.syncflow_dbt.source_unique_syncflow_raw_raw_users_user_id.1879d373ab, now test.syncflow_dbt.not_null_stg_users_email_domain.e7305991d5)
+[0m16:59:59.445380 [debug] [Thread-4 (]: Began compiling node test.syncflow_dbt.unique_stg_events_event_id.66ebb17438
+[0m16:59:59.445844 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.syncflow_dbt.source_unique_syncflow_raw_raw_events_event_id.4073ee096c, now test.syncflow_dbt.not_null_stg_users_user_id.980dfc1b77)
+[0m16:59:59.446336 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.syncflow_dbt.not_null_stg_events_event_id.715b3f7012, now test.syncflow_dbt.unique_stg_users_user_id.c2ff477e6b)
+[0m16:59:59.446821 [debug] [Thread-2 (]: Began compiling node test.syncflow_dbt.not_null_stg_users_email_domain.e7305991d5
+[0m16:59:59.450723 [debug] [Thread-4 (]: Writing injected SQL for node "test.syncflow_dbt.unique_stg_events_event_id.66ebb17438"
+[0m16:59:59.451191 [debug] [Thread-1 (]: Began compiling node test.syncflow_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m16:59:59.451689 [debug] [Thread-3 (]: Began compiling node test.syncflow_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m16:59:59.460412 [debug] [Thread-2 (]: Writing injected SQL for node "test.syncflow_dbt.not_null_stg_users_email_domain.e7305991d5"
+[0m16:59:59.464448 [debug] [Thread-1 (]: Writing injected SQL for node "test.syncflow_dbt.not_null_stg_users_user_id.980dfc1b77"
+[0m16:59:59.468678 [debug] [Thread-3 (]: Writing injected SQL for node "test.syncflow_dbt.unique_stg_users_user_id.c2ff477e6b"
+[0m16:59:59.469414 [debug] [Thread-4 (]: Began executing node test.syncflow_dbt.unique_stg_events_event_id.66ebb17438
+[0m16:59:59.470460 [debug] [Thread-4 (]: Finished running node test.syncflow_dbt.unique_stg_events_event_id.66ebb17438
+[0m16:59:59.471362 [debug] [Thread-2 (]: Began executing node test.syncflow_dbt.not_null_stg_users_email_domain.e7305991d5
+[0m16:59:59.471881 [debug] [Thread-3 (]: Began executing node test.syncflow_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m16:59:59.472350 [debug] [Thread-1 (]: Began executing node test.syncflow_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m16:59:59.473222 [debug] [Thread-2 (]: Finished running node test.syncflow_dbt.not_null_stg_users_email_domain.e7305991d5
+[0m16:59:59.474031 [debug] [Thread-3 (]: Finished running node test.syncflow_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m16:59:59.474901 [debug] [Thread-1 (]: Finished running node test.syncflow_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m16:59:59.476619 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:59:59.476979 [debug] [MainThread]: Connection 'list_syncflow_main' was properly closed.
+[0m16:59:59.477304 [debug] [MainThread]: Connection 'test.syncflow_dbt.unique_stg_users_user_id.c2ff477e6b' was properly closed.
+[0m16:59:59.477621 [debug] [MainThread]: Connection 'test.syncflow_dbt.unique_stg_events_event_id.66ebb17438' was properly closed.
+[0m16:59:59.477936 [debug] [MainThread]: Connection 'test.syncflow_dbt.not_null_stg_users_user_id.980dfc1b77' was properly closed.
+[0m16:59:59.478255 [debug] [MainThread]: Connection 'test.syncflow_dbt.not_null_stg_users_email_domain.e7305991d5' was properly closed.
+[0m16:59:59.481083 [debug] [MainThread]: Command end result
+[0m16:59:59.579115 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m16:59:59.581787 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m16:59:59.589761 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\run_results.json
+[0m16:59:59.592405 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m16:59:59.592789 [info ] [MainThread]: Building catalog
+[0m16:59:59.602777 [debug] [ThreadPool]: Acquiring new duckdb connection 'syncflow.information_schema'
+[0m16:59:59.609141 [debug] [ThreadPool]: Using duckdb connection "syncflow.information_schema"
+[0m16:59:59.609606 [debug] [ThreadPool]: On syncflow.information_schema: BEGIN
+[0m16:59:59.609978 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:59:59.610971 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:59:59.611457 [debug] [ThreadPool]: Using duckdb connection "syncflow.information_schema"
+[0m16:59:59.611932 [debug] [ThreadPool]: On syncflow.information_schema: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "syncflow.information_schema"} */
+with relations AS (
+      select
+        t.table_name
+        , t.database_name
+        , t.schema_name
+        , 'BASE TABLE' as table_type
+        , t.comment as table_comment
+      from duckdb_tables() t
+      WHERE t.database_name = 'syncflow'
+      UNION ALL
+      SELECT v.view_name as table_name
+      , v.database_name
+      , v.schema_name
+      , 'VIEW' as table_type
+      , v.comment as table_comment
+      from duckdb_views() v
+      WHERE v.database_name = 'syncflow'
+    )
+    select
+        'syncflow' as table_database,
+        r.schema_name as table_schema,
+        r.table_name,
+        r.table_type,
+        r.table_comment,
+        c.column_name,
+        c.column_index as column_index,
+        c.data_type as column_type,
+        c.comment as column_comment,
+        NULL as table_owner
+    FROM relations r JOIN duckdb_columns() c ON r.schema_name = c.schema_name AND r.table_name = c.table_name
+    WHERE (upper(r.schema_name) = upper('main'))
+    ORDER BY
+        r.schema_name,
+        r.table_name,
+        c.column_index
+[0m16:59:59.628105 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m16:59:59.631694 [debug] [ThreadPool]: On syncflow.information_schema: ROLLBACK
+[0m16:59:59.632559 [debug] [ThreadPool]: Failed to rollback 'syncflow.information_schema'
+[0m16:59:59.632939 [debug] [ThreadPool]: On syncflow.information_schema: Close
+[0m16:59:59.644839 [debug] [MainThread]: Wrote artifact CatalogArtifact to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\catalog.json
+[0m16:59:59.668542 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m16:59:59.671149 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m16:59:59.671542 [info ] [MainThread]: Catalog written to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\catalog.json
+[0m16:59:59.672570 [debug] [MainThread]: Command `dbt docs generate` succeeded at 16:59:59.672425 after 2.27 seconds
+[0m16:59:59.672941 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m16:59:59.673262 [debug] [MainThread]: Connection 'syncflow.information_schema' was properly closed.
+[0m16:59:59.673621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA1C0BE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA3A07C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029AA4BECAA0>]}
+[0m16:59:59.674021 [debug] [MainThread]: Flushing usage events
+[0m17:00:00.493612 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:00:25.951614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223093ECD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230A53FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230A53FB10>]}
+
+
+============================== 17:00:25.956645 | aea5679f-af1b-4bd2-9875-44d60ce89006 ==============================
+[0m17:00:25.956645 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:00:25.957418 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt', 'use_colors': 'True', 'invocation_command': 'dbt docs serve', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m17:00:26.236474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aea5679f-af1b-4bd2-9875-44d60ce89006', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022309879220>]}
+[0m17:00:26.314086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'aea5679f-af1b-4bd2-9875-44d60ce89006', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230A649480>]}
+[0m17:01:40.308133 [error] [MainThread]: Encountered an error:
+
+[0m17:01:40.312600 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\MYPC\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "C:\Users\MYPC\AppData\Local\Programs\Python\Python313\Lib\selectors.py", line 314, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MYPC\AppData\Local\Programs\Python\Python313\Lib\selectors.py", line 305, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m17:01:40.314283 [debug] [MainThread]: Command `dbt docs serve` failed at 17:01:40.314019 after 74.50 seconds
+[0m17:01:40.315018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230B94A950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230B94A750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230B8FBA70>]}
+[0m17:01:40.315987 [debug] [MainThread]: Flushing usage events
+[0m17:01:41.211887 [debug] [MainThread]: An error was encountered while trying to flush usage events
