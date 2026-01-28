@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: syncflow_raw
+    schema: main # DuckDB default schema
+    tables:
+      - name: raw_users
+      - name: raw_events

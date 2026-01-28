@@ -1,0 +1,6 @@
+venv/
+data/*.db
+syncflow_dbt/target/
+syncflow_dbt/dbt_packages/
+syncflow_dbt/logs/
+.DS_Store

@@ -1,0 +1,817 @@
+[0m02:25:20.192333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E901A4CD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E902BA3ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E902BA3B10>]}
+
+
+============================== 02:25:20.197636 | 1dc7104b-a804-4226-b5be-c28e8d3de5e0 ==============================
+[0m02:25:20.197636 [info ] [MainThread]: Running with dbt=1.11.2
+[0m02:25:20.198504 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug --profiles-dir .', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m02:25:20.225717 [info ] [MainThread]: dbt version: 1.11.2
+[0m02:25:20.226459 [info ] [MainThread]: python version: 3.13.3
+[0m02:25:20.227018 [info ] [MainThread]: python path: D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Scripts\python.exe
+[0m02:25:20.227563 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m02:25:20.360663 [info ] [MainThread]: Using profiles dir at .
+[0m02:25:20.361381 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m02:25:20.361953 [info ] [MainThread]: Using dbt_project.yml file at D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\dbt_project.yml
+[0m02:25:20.364919 [info ] [MainThread]: adapter type: duckdb
+[0m02:25:20.365555 [info ] [MainThread]: adapter version: 1.10.0
+[0m02:25:20.496835 [info ] [MainThread]: Configuration:
+[0m02:25:20.497673 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m02:25:20.498279 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m02:25:20.498845 [info ] [MainThread]: Required dependencies:
+[0m02:25:20.499443 [debug] [MainThread]: Executing "git --help"
+[0m02:25:20.543382 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m02:25:20.543955 [debug] [MainThread]: STDERR: "b''"
+[0m02:25:20.544475 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m02:25:20.545135 [info ] [MainThread]: Connection:
+[0m02:25:20.545737 [info ] [MainThread]:   database: syncflow
+[0m02:25:20.546285 [info ] [MainThread]:   schema: main
+[0m02:25:20.546827 [info ] [MainThread]:   path: D:/SaaS_Analytics_Portfolio/syncflow_analytics/data/syncflow.db
+[0m02:25:20.547356 [info ] [MainThread]:   config_options: None
+[0m02:25:20.547850 [info ] [MainThread]:   extensions: None
+[0m02:25:20.548373 [info ] [MainThread]:   settings: {}
+[0m02:25:20.548869 [info ] [MainThread]:   external_root: .
+[0m02:25:20.549407 [info ] [MainThread]:   use_credential_provider: None
+[0m02:25:20.549907 [info ] [MainThread]:   attach: None
+[0m02:25:20.550426 [info ] [MainThread]:   filesystems: None
+[0m02:25:20.550932 [info ] [MainThread]:   remote: None
+[0m02:25:20.551497 [info ] [MainThread]:   plugins: None
+[0m02:25:20.552036 [info ] [MainThread]:   disable_transactions: False
+[0m02:25:20.552751 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m02:25:20.963931 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m02:25:24.658911 [debug] [MainThread]: Using duckdb connection "debug"
+[0m02:25:24.659340 [debug] [MainThread]: On debug: select 1 as id
+[0m02:25:24.659681 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:25:24.908453 [debug] [MainThread]: SQL status: OK in 0.249 seconds
+[0m02:25:24.909604 [debug] [MainThread]: On debug: Close
+[0m02:25:24.910656 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m02:25:24.911413 [info ] [MainThread]: [32mAll checks passed![0m
+[0m02:25:24.912462 [debug] [MainThread]: Command `dbt debug` succeeded at 02:25:24.912316 after 4.89 seconds
+[0m02:25:24.912843 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m02:25:24.913252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9041ED5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E903F17BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E903C0B460>]}
+[0m02:25:24.913684 [debug] [MainThread]: Flushing usage events
+[0m02:25:25.939180 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:14:49.974434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FF98FCD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FFAA5BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FFAA5BB10>]}
+
+
+============================== 15:14:50.019954 | 2348f594-43ae-4d78-9af1-b7e7213517bc ==============================
+[0m15:14:50.019954 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:14:50.021256 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m15:14:51.309259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2348f594-43ae-4d78-9af1-b7e7213517bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FF9D89220>]}
+[0m15:14:51.386403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2348f594-43ae-4d78-9af1-b7e7213517bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FFBB31370>]}
+[0m15:14:51.434851 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m15:14:52.079188 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m15:14:52.080581 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:14:52.081229 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2348f594-43ae-4d78-9af1-b7e7213517bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FFBAE7A50>]}
+[0m15:14:54.992423 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.syncflow_dbt.stg_events' (models\staging\stg_events.sql) depends on a source named 'src_syncflow.raw_events' which was not found
+[0m15:14:54.993637 [debug] [MainThread]: Command `dbt run` failed at 15:14:54.993489 after 5.25 seconds
+[0m15:14:54.994083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FFC2789B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FFC278320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FFA8FBE70>]}
+[0m15:14:54.994510 [debug] [MainThread]: Flushing usage events
+[0m15:14:56.065478 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:17:34.200013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000248994ACD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489A60BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489A60BB10>]}
+
+
+============================== 15:17:34.205084 | e2d206cc-827d-48d5-8be1-7c48d54f5bb5 ==============================
+[0m15:17:34.205084 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:17:34.205862 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m15:17:34.482166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024899939220>]}
+[0m15:17:34.558382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489B6DD370>]}
+[0m15:17:34.561380 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m15:17:34.952672 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m15:17:34.953941 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:17:34.954559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489B697A50>]}
+[0m15:17:36.574197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489BBC9A90>]}
+[0m15:17:36.677368 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m15:17:36.709808 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m15:17:36.851841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489BD4D9B0>]}
+[0m15:17:36.852424 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 472 macros
+[0m15:17:36.853068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489BFAED00>]}
+[0m15:17:36.857625 [info ] [MainThread]: 
+[0m15:17:36.858274 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:17:36.858875 [info ] [MainThread]: 
+[0m15:17:36.859847 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:17:36.866376 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow'
+[0m15:17:40.370864 [debug] [ThreadPool]: Using duckdb connection "list_syncflow"
+[0m15:17:40.371324 [debug] [ThreadPool]: On list_syncflow: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "list_syncflow"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"syncflow"'
+    
+  
+  
+[0m15:17:40.371669 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:17:40.792477 [debug] [ThreadPool]: SQL status: OK in 0.421 seconds
+[0m15:17:40.809516 [debug] [ThreadPool]: On list_syncflow: Close
+[0m15:17:40.814493 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_syncflow, now create_syncflow_main)
+[0m15:17:40.824548 [debug] [ThreadPool]: Creating schema "database: "syncflow"
+schema: "main"
+"
+[0m15:17:40.831741 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:17:40.832177 [debug] [ThreadPool]: On create_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "create_syncflow_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='syncflow'
+        and type='sqlite'
+    
+  
+[0m15:17:40.832520 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:17:40.833717 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:17:40.835113 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:17:40.835515 [debug] [ThreadPool]: On create_syncflow_main: BEGIN
+[0m15:17:40.836445 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:17:40.836805 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:17:40.837148 [debug] [ThreadPool]: On create_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "create_syncflow_main"} */
+
+    
+    
+        create schema if not exists "syncflow"."main"
+    
+[0m15:17:40.839741 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m15:17:40.840688 [debug] [ThreadPool]: On create_syncflow_main: COMMIT
+[0m15:17:40.841055 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:17:40.841420 [debug] [ThreadPool]: On create_syncflow_main: COMMIT
+[0m15:17:40.842207 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:17:40.842569 [debug] [ThreadPool]: On create_syncflow_main: Close
+[0m15:17:40.845252 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow_main'
+[0m15:17:40.850925 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m15:17:40.851297 [debug] [ThreadPool]: On list_syncflow_main: BEGIN
+[0m15:17:40.852224 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:17:40.852951 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:17:40.853290 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m15:17:40.853632 [debug] [ThreadPool]: On list_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "list_syncflow_main"} */
+select
+      'syncflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'syncflow'
+  
+[0m15:17:40.961722 [debug] [ThreadPool]: SQL status: OK in 0.108 seconds
+[0m15:17:40.963543 [debug] [ThreadPool]: On list_syncflow_main: ROLLBACK
+[0m15:17:40.995725 [debug] [ThreadPool]: Failed to rollback 'list_syncflow_main'
+[0m15:17:40.996183 [debug] [ThreadPool]: On list_syncflow_main: Close
+[0m15:17:40.997729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489C2AC410>]}
+[0m15:17:40.998231 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:17:40.998562 [debug] [MainThread]: On master: BEGIN
+[0m15:17:40.998871 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:17:40.999519 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:17:40.999856 [debug] [MainThread]: On master: COMMIT
+[0m15:17:41.000179 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:17:41.000520 [debug] [MainThread]: On master: COMMIT
+[0m15:17:41.001042 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:17:41.001381 [debug] [MainThread]: On master: Close
+[0m15:17:41.010374 [debug] [Thread-2 (]: Began running node model.syncflow_dbt.stg_events
+[0m15:17:41.010883 [debug] [Thread-1 (]: Began running node model.syncflow_dbt.my_first_dbt_model
+[0m15:17:41.011875 [debug] [Thread-3 (]: Began running node model.syncflow_dbt.stg_users
+[0m15:17:41.011489 [info ] [Thread-2 (]: 2 of 4 START sql view model main.stg_events .................................... [RUN]
+[0m15:17:41.013787 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_events'
+[0m15:17:41.014216 [debug] [Thread-2 (]: Began compiling node model.syncflow_dbt.stg_events
+[0m15:17:41.012473 [info ] [Thread-1 (]: 1 of 4 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m15:17:41.022749 [debug] [Thread-2 (]: Writing injected SQL for node "model.syncflow_dbt.stg_events"
+[0m15:17:41.023441 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.syncflow_dbt.my_first_dbt_model'
+[0m15:17:41.013141 [info ] [Thread-3 (]: 3 of 4 START sql view model main.stg_users ..................................... [RUN]
+[0m15:17:41.024254 [debug] [Thread-1 (]: Began compiling node model.syncflow_dbt.my_first_dbt_model
+[0m15:17:41.024929 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_users'
+[0m15:17:41.029137 [debug] [Thread-1 (]: Writing injected SQL for node "model.syncflow_dbt.my_first_dbt_model"
+[0m15:17:41.029738 [debug] [Thread-3 (]: Began compiling node model.syncflow_dbt.stg_users
+[0m15:17:41.032728 [debug] [Thread-3 (]: Writing injected SQL for node "model.syncflow_dbt.stg_users"
+[0m15:17:41.033886 [debug] [Thread-2 (]: Began executing node model.syncflow_dbt.stg_events
+[0m15:17:41.041186 [debug] [Thread-1 (]: Began executing node model.syncflow_dbt.my_first_dbt_model
+[0m15:17:41.054045 [debug] [Thread-3 (]: Began executing node model.syncflow_dbt.stg_users
+[0m15:17:41.083003 [debug] [Thread-1 (]: Writing runtime sql for node "model.syncflow_dbt.my_first_dbt_model"
+[0m15:17:41.092416 [debug] [Thread-2 (]: Writing runtime sql for node "model.syncflow_dbt.stg_events"
+[0m15:17:41.096072 [debug] [Thread-3 (]: Writing runtime sql for node "model.syncflow_dbt.stg_users"
+[0m15:17:41.099337 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:17:41.099828 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: BEGIN
+[0m15:17:41.100375 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:17:41.101489 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m15:17:41.101963 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:17:41.102478 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+
+  
+  create view "syncflow"."main"."stg_events__dbt_tmp" as (
+    with source as (
+    select * from "syncflow"."main"."raw_events"
+),
+renamed as (
+    select
+        event_id,
+        user_id,
+        event_type,
+        event_time as occurred_at,
+    from source
+)
+select * from renamed
+  );
+
+[0m15:17:41.103070 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m15:17:41.103594 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:17:41.104407 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: BEGIN
+[0m15:17:41.104932 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: BEGIN
+[0m15:17:41.105409 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:17:41.105897 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:17:41.106428 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m15:17:41.113110 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:17:41.113552 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+alter view "syncflow"."main"."stg_events__dbt_tmp" rename to "stg_events"
+[0m15:17:41.113991 [debug] [Thread-3 (]: SQL status: OK in 0.009 seconds
+[0m15:17:41.114435 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m15:17:41.114833 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+
+  
+  create view "syncflow"."main"."stg_users__dbt_tmp" as (
+    with source as (
+    select * from "syncflow"."main"."raw_users"
+),
+
+renamed as (
+    select
+        user_id,
+        split_part(email, '@', 2) as email_username,
+        company_size,
+        signup_date as signed_up_at,
+    from source
+)
+select * from renamed
+  );
+
+[0m15:17:41.116975 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m15:17:41.117599 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:17:41.118027 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "syncflow"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m15:17:41.118916 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m15:17:41.129417 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: COMMIT
+[0m15:17:41.129896 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:17:41.130282 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: COMMIT
+[0m15:17:41.188631 [debug] [Thread-2 (]: SQL status: OK in 0.058 seconds
+[0m15:17:41.194449 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:17:41.195470 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+
+      drop view if exists "syncflow"."main"."stg_events__dbt_backup" cascade
+    
+[0m15:17:41.196575 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m15:17:41.199068 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: Close
+[0m15:17:41.201588 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489C3D4680>]}
+[0m15:17:41.202329 [info ] [Thread-2 (]: 2 of 4 OK created sql view model main.stg_events ............................... [[32mOK[0m in 0.19s]
+[0m15:17:41.203479 [debug] [Thread-2 (]: Finished running node model.syncflow_dbt.stg_events
+[0m15:17:41.218206 [debug] [Thread-1 (]: SQL status: OK in 0.100 seconds
+[0m15:17:41.222439 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:17:41.222965 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+alter table "syncflow"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m15:17:41.223815 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:17:41.229682 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: COMMIT
+[0m15:17:41.230170 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:17:41.230573 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: COMMIT
+[0m15:17:41.232785 [debug] [Thread-3 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+
+  
+  create view "syncflow"."main"."stg_users__dbt_tmp" as (
+    with source as (
+    select * from "syncflow"."main"."raw_users"
+),
+
+renamed as (
+    select
+        user_id,
+        split_part(email, '@', 2) as email_username,
+        company_size,
+        signup_date as signed_up_at,
+    from source
+)
+select * from renamed
+  );
+
+[0m15:17:41.233383 [debug] [Thread-3 (]: DuckDB adapter: Rolling back transaction.
+[0m15:17:41.233879 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: ROLLBACK
+[0m15:17:41.256261 [debug] [Thread-1 (]: SQL status: OK in 0.025 seconds
+[0m15:17:41.258819 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:17:41.259239 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+
+      drop table if exists "syncflow"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m15:17:41.260071 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:17:41.261509 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: Close
+[0m15:17:41.262090 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489D437390>]}
+[0m15:17:41.262798 [info ] [Thread-1 (]: 1 of 4 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.24s]
+[0m15:17:41.263727 [debug] [Thread-1 (]: Finished running node model.syncflow_dbt.my_first_dbt_model
+[0m15:17:41.264505 [debug] [Thread-4 (]: Began running node model.syncflow_dbt.my_second_dbt_model
+[0m15:17:41.265043 [info ] [Thread-4 (]: 4 of 4 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m15:17:41.265830 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.syncflow_dbt.my_second_dbt_model'
+[0m15:17:41.266254 [debug] [Thread-4 (]: Began compiling node model.syncflow_dbt.my_second_dbt_model
+[0m15:17:41.269474 [debug] [Thread-4 (]: Writing injected SQL for node "model.syncflow_dbt.my_second_dbt_model"
+[0m15:17:41.270702 [debug] [Thread-4 (]: Began executing node model.syncflow_dbt.my_second_dbt_model
+[0m15:17:41.274160 [debug] [Thread-4 (]: Writing runtime sql for node "model.syncflow_dbt.my_second_dbt_model"
+[0m15:17:41.275221 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:17:41.275667 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: BEGIN
+[0m15:17:41.276078 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:17:41.277071 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m15:17:41.277891 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:17:41.278696 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_second_dbt_model"} */
+
+  
+  create view "syncflow"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "syncflow"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m15:17:41.280066 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m15:17:41.286248 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:17:41.286844 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_second_dbt_model"} */
+alter view "syncflow"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m15:17:41.287815 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m15:17:41.289435 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: COMMIT
+[0m15:17:41.289923 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:17:41.290415 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: COMMIT
+[0m15:17:41.311764 [debug] [Thread-4 (]: SQL status: OK in 0.021 seconds
+[0m15:17:41.314341 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:17:41.314800 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_second_dbt_model"} */
+
+      drop view if exists "syncflow"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m15:17:41.315614 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m15:17:41.317070 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: Close
+[0m15:17:41.317659 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489C2B4B50>]}
+[0m15:17:41.318316 [info ] [Thread-4 (]: 4 of 4 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.05s]
+[0m15:17:41.319597 [debug] [Thread-4 (]: Finished running node model.syncflow_dbt.my_second_dbt_model
+[0m15:17:41.503324 [debug] [Thread-3 (]: Failed to rollback 'model.syncflow_dbt.stg_users'
+[0m15:17:41.503812 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: Close
+[0m15:17:41.508455 [debug] [Thread-3 (]: Runtime Error in model stg_users (models\staging\stg_users.sql)
+  Binder Error: Referenced column "signup_date" not found in FROM clause!
+  Candidate bindings: "signup_at", "user_id"
+  
+  LINE 14:         signup_date as signed_up_at,
+                   ^
+[0m15:17:41.508975 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e2d206cc-827d-48d5-8be1-7c48d54f5bb5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489C3EB7E0>]}
+[0m15:17:41.509632 [error] [Thread-3 (]: 3 of 4 ERROR creating sql view model main.stg_users ............................ [[31mERROR[0m in 0.48s]
+[0m15:17:41.510534 [debug] [Thread-3 (]: Finished running node model.syncflow_dbt.stg_users
+[0m15:17:41.511211 [debug] [Thread-7 (]: Marking all children of 'model.syncflow_dbt.stg_users' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_users (models\staging\stg_users.sql)
+  Binder Error: Referenced column "signup_date" not found in FROM clause!
+  Candidate bindings: "signup_at", "user_id"
+  
+  LINE 14:         signup_date as signed_up_at,
+                   ^.
+[0m15:17:41.513350 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:17:41.513730 [debug] [MainThread]: On master: BEGIN
+[0m15:17:41.514048 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:17:41.514744 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:17:41.515083 [debug] [MainThread]: On master: COMMIT
+[0m15:17:41.515411 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:17:41.515723 [debug] [MainThread]: On master: COMMIT
+[0m15:17:41.516256 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:17:41.516597 [debug] [MainThread]: On master: Close
+[0m15:17:41.517023 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:17:41.517328 [debug] [MainThread]: Connection 'create_syncflow_main' was properly closed.
+[0m15:17:41.517620 [debug] [MainThread]: Connection 'list_syncflow_main' was properly closed.
+[0m15:17:41.517909 [debug] [MainThread]: Connection 'model.syncflow_dbt.stg_events' was properly closed.
+[0m15:17:41.518235 [debug] [MainThread]: Connection 'model.syncflow_dbt.my_first_dbt_model' was properly closed.
+[0m15:17:41.518758 [debug] [MainThread]: Connection 'model.syncflow_dbt.stg_users' was properly closed.
+[0m15:17:41.519071 [debug] [MainThread]: Connection 'model.syncflow_dbt.my_second_dbt_model' was properly closed.
+[0m15:17:41.519597 [info ] [MainThread]: 
+[0m15:17:41.520168 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 4.66 seconds (4.66s).
+[0m15:17:41.521733 [debug] [MainThread]: Command end result
+[0m15:17:41.545236 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m15:17:41.547674 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m15:17:41.554664 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\run_results.json
+[0m15:17:41.555339 [info ] [MainThread]: 
+[0m15:17:41.556503 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:17:41.557298 [info ] [MainThread]: 
+[0m15:17:41.557927 [error] [MainThread]: [31mFailure in model stg_users (models\staging\stg_users.sql)[0m
+[0m15:17:41.558567 [error] [MainThread]:   Runtime Error in model stg_users (models\staging\stg_users.sql)
+  Binder Error: Referenced column "signup_date" not found in FROM clause!
+  Candidate bindings: "signup_at", "user_id"
+  
+  LINE 14:         signup_date as signed_up_at,
+                   ^
+[0m15:17:41.559157 [info ] [MainThread]: 
+[0m15:17:41.559786 [info ] [MainThread]:   compiled code at target\compiled\syncflow_dbt\models\staging\stg_users.sql
+[0m15:17:41.560328 [info ] [MainThread]: 
+[0m15:17:41.560892 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m15:17:41.561906 [debug] [MainThread]: Command `dbt run` failed at 15:17:41.561744 after 7.50 seconds
+[0m15:17:41.562388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489A4D1C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489BCBB2F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002489D4BFF50>]}
+[0m15:17:41.562823 [debug] [MainThread]: Flushing usage events
+[0m15:17:42.406532 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:18:31.749161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3290ACD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32A20BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32A20BB10>]}
+
+
+============================== 15:18:31.754660 | fa912401-6bff-40de-9ca3-106a5de8355a ==============================
+[0m15:18:31.754660 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:18:31.755454 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m15:18:32.030303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32953D220>]}
+[0m15:18:32.104679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32B2D9370>]}
+[0m15:18:32.107592 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m15:18:32.541625 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m15:18:32.742794 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:18:32.743451 [debug] [MainThread]: Partial parsing: updated file: syncflow_dbt://models\staging\stg_users.sql
+[0m15:18:33.053798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32B76ED50>]}
+[0m15:18:33.151410 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m15:18:33.153881 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m15:18:33.236327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32A0F33E0>]}
+[0m15:18:33.236861 [info ] [MainThread]: Found 4 models, 4 data tests, 2 sources, 472 macros
+[0m15:18:33.237508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32A0AB310>]}
+[0m15:18:33.239888 [info ] [MainThread]: 
+[0m15:18:33.240557 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:18:33.241162 [info ] [MainThread]: 
+[0m15:18:33.242001 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:18:33.247701 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow'
+[0m15:18:33.365634 [debug] [ThreadPool]: Using duckdb connection "list_syncflow"
+[0m15:18:33.366086 [debug] [ThreadPool]: On list_syncflow: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "list_syncflow"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"syncflow"'
+    
+  
+  
+[0m15:18:33.366428 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:18:33.394852 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m15:18:33.396392 [debug] [ThreadPool]: On list_syncflow: Close
+[0m15:18:33.397172 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_syncflow, now create_syncflow_main)
+[0m15:18:33.397710 [debug] [ThreadPool]: Creating schema "database: "syncflow"
+schema: "main"
+"
+[0m15:18:33.404174 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:18:33.404565 [debug] [ThreadPool]: On create_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "create_syncflow_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='syncflow'
+        and type='sqlite'
+    
+  
+[0m15:18:33.404905 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:18:33.406027 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:18:33.407410 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:18:33.407745 [debug] [ThreadPool]: On create_syncflow_main: BEGIN
+[0m15:18:33.408287 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:18:33.408613 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:18:33.408940 [debug] [ThreadPool]: On create_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "create_syncflow_main"} */
+
+    
+    
+        create schema if not exists "syncflow"."main"
+    
+[0m15:18:33.409535 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:18:33.410420 [debug] [ThreadPool]: On create_syncflow_main: COMMIT
+[0m15:18:33.410832 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m15:18:33.411160 [debug] [ThreadPool]: On create_syncflow_main: COMMIT
+[0m15:18:33.411911 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:18:33.412284 [debug] [ThreadPool]: On create_syncflow_main: Close
+[0m15:18:33.414177 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow_main'
+[0m15:18:33.420241 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m15:18:33.420648 [debug] [ThreadPool]: On list_syncflow_main: BEGIN
+[0m15:18:33.420970 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:18:33.421695 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:18:33.422035 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m15:18:33.422373 [debug] [ThreadPool]: On list_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "list_syncflow_main"} */
+select
+      'syncflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'syncflow'
+  
+[0m15:18:33.474707 [debug] [ThreadPool]: SQL status: OK in 0.052 seconds
+[0m15:18:33.476377 [debug] [ThreadPool]: On list_syncflow_main: ROLLBACK
+[0m15:18:33.477642 [debug] [ThreadPool]: Failed to rollback 'list_syncflow_main'
+[0m15:18:33.478005 [debug] [ThreadPool]: On list_syncflow_main: Close
+[0m15:18:33.479806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32BD3CA10>]}
+[0m15:18:33.480321 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:33.480673 [debug] [MainThread]: On master: BEGIN
+[0m15:18:33.481005 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:18:33.481695 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:18:33.482057 [debug] [MainThread]: On master: COMMIT
+[0m15:18:33.482405 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:33.482744 [debug] [MainThread]: On master: COMMIT
+[0m15:18:33.483311 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:18:33.483656 [debug] [MainThread]: On master: Close
+[0m15:18:33.489246 [debug] [Thread-1 (]: Began running node model.syncflow_dbt.my_first_dbt_model
+[0m15:18:33.490119 [debug] [Thread-3 (]: Began running node model.syncflow_dbt.stg_users
+[0m15:18:33.491101 [debug] [Thread-2 (]: Began running node model.syncflow_dbt.stg_events
+[0m15:18:33.490675 [info ] [Thread-3 (]: 3 of 4 START sql view model main.stg_users ..................................... [RUN]
+[0m15:18:33.491775 [info ] [Thread-2 (]: 2 of 4 START sql view model main.stg_events .................................... [RUN]
+[0m15:18:33.492917 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_users'
+[0m15:18:33.493602 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_events'
+[0m15:18:33.489891 [info ] [Thread-1 (]: 1 of 4 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m15:18:33.494263 [debug] [Thread-3 (]: Began compiling node model.syncflow_dbt.stg_users
+[0m15:18:33.494753 [debug] [Thread-2 (]: Began compiling node model.syncflow_dbt.stg_events
+[0m15:18:33.495344 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.syncflow_dbt.my_first_dbt_model'
+[0m15:18:33.503062 [debug] [Thread-3 (]: Writing injected SQL for node "model.syncflow_dbt.stg_users"
+[0m15:18:33.506120 [debug] [Thread-2 (]: Writing injected SQL for node "model.syncflow_dbt.stg_events"
+[0m15:18:33.506926 [debug] [Thread-1 (]: Began compiling node model.syncflow_dbt.my_first_dbt_model
+[0m15:18:33.510478 [debug] [Thread-1 (]: Writing injected SQL for node "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.511558 [debug] [Thread-3 (]: Began executing node model.syncflow_dbt.stg_users
+[0m15:18:33.512480 [debug] [Thread-2 (]: Began executing node model.syncflow_dbt.stg_events
+[0m15:18:33.544881 [debug] [Thread-1 (]: Began executing node model.syncflow_dbt.my_first_dbt_model
+[0m15:18:33.557570 [debug] [Thread-3 (]: Writing runtime sql for node "model.syncflow_dbt.stg_users"
+[0m15:18:33.564371 [debug] [Thread-2 (]: Writing runtime sql for node "model.syncflow_dbt.stg_events"
+[0m15:18:33.580717 [debug] [Thread-1 (]: Writing runtime sql for node "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.581546 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m15:18:33.582014 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: BEGIN
+[0m15:18:33.582396 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:18:33.583478 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m15:18:33.583993 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m15:18:33.584421 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+
+  
+  create view "syncflow"."main"."stg_users__dbt_tmp" as (
+    with source as (
+    select * from "syncflow"."main"."raw_users"
+),
+
+renamed as (
+    select
+        user_id,
+        split_part(email, '@', 2) as email_username,
+        company_size,
+        signup_at as signed_up_at,
+    from source
+)
+select * from renamed
+  );
+
+[0m15:18:33.585159 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.585606 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: BEGIN
+[0m15:18:33.586014 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:18:33.586670 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:18:33.587102 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: BEGIN
+[0m15:18:33.587505 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:18:33.588097 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m15:18:33.594291 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:18:33.594803 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.595223 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "syncflow"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m15:18:33.596033 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m15:18:33.596579 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:18:33.597023 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+
+  
+  create view "syncflow"."main"."stg_events__dbt_tmp" as (
+    with source as (
+    select * from "syncflow"."main"."raw_events"
+),
+renamed as (
+    select
+        event_id,
+        user_id,
+        event_type,
+        event_time as occurred_at,
+    from source
+)
+select * from renamed
+  );
+
+[0m15:18:33.597923 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m15:18:33.598353 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+alter view "syncflow"."main"."stg_users__dbt_tmp" rename to "stg_users"
+[0m15:18:33.598919 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:33.604919 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.605433 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m15:18:33.606070 [debug] [Thread-2 (]: SQL status: OK in 0.009 seconds
+[0m15:18:33.609499 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:18:33.609985 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+alter view "syncflow"."main"."stg_events" rename to "stg_events__dbt_backup"
+[0m15:18:33.610611 [debug] [Thread-3 (]: SQL status: OK in 0.012 seconds
+[0m15:18:33.620903 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: COMMIT
+[0m15:18:33.621406 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m15:18:33.621872 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m15:18:33.623549 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.624001 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: COMMIT
+[0m15:18:33.624456 [debug] [Thread-2 (]: SQL status: OK in 0.014 seconds
+[0m15:18:33.624956 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m15:18:33.628637 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:18:33.629623 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+alter view "syncflow"."main"."stg_events__dbt_tmp" rename to "stg_events"
+[0m15:18:33.630595 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m15:18:33.634351 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: COMMIT
+[0m15:18:33.634792 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:18:33.635179 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: COMMIT
+[0m15:18:33.635801 [debug] [Thread-3 (]: SQL status: OK in 0.010 seconds
+[0m15:18:33.641591 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m15:18:33.642027 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+
+      drop view if exists "syncflow"."main"."stg_users__dbt_backup" cascade
+    
+[0m15:18:33.680580 [debug] [Thread-2 (]: SQL status: OK in 0.044 seconds
+[0m15:18:33.683725 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m15:18:33.684169 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+
+      drop view if exists "syncflow"."main"."stg_events__dbt_backup" cascade
+    
+[0m15:18:33.684823 [debug] [Thread-3 (]: SQL status: OK in 0.042 seconds
+[0m15:18:33.687349 [debug] [Thread-3 (]: On model.syncflow_dbt.stg_users: Close
+[0m15:18:33.689752 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32BD4D250>]}
+[0m15:18:33.690511 [info ] [Thread-3 (]: 3 of 4 OK created sql view model main.stg_users ................................ [[32mOK[0m in 0.20s]
+[0m15:18:33.691457 [debug] [Thread-3 (]: Finished running node model.syncflow_dbt.stg_users
+[0m15:18:33.732089 [debug] [Thread-2 (]: SQL status: OK in 0.047 seconds
+[0m15:18:33.733765 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_events: Close
+[0m15:18:33.734347 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32BA3E2B0>]}
+[0m15:18:33.734985 [info ] [Thread-2 (]: 2 of 4 OK created sql view model main.stg_events ............................... [[32mOK[0m in 0.24s]
+[0m15:18:33.735870 [debug] [Thread-2 (]: Finished running node model.syncflow_dbt.stg_events
+[0m15:18:33.769597 [debug] [Thread-1 (]: SQL status: OK in 0.140 seconds
+[0m15:18:33.772820 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.773247 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+alter table "syncflow"."main"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m15:18:33.774030 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:18:33.777070 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.777476 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+alter table "syncflow"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m15:18:33.778247 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:18:33.783430 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: COMMIT
+[0m15:18:33.783904 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.784288 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: COMMIT
+[0m15:18:33.810658 [debug] [Thread-1 (]: SQL status: OK in 0.026 seconds
+[0m15:18:33.813354 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.my_first_dbt_model"
+[0m15:18:33.813809 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_first_dbt_model"} */
+
+      drop table if exists "syncflow"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m15:18:33.832796 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m15:18:33.834343 [debug] [Thread-1 (]: On model.syncflow_dbt.my_first_dbt_model: Close
+[0m15:18:33.834940 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32CE519F0>]}
+[0m15:18:33.835597 [info ] [Thread-1 (]: 1 of 4 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.34s]
+[0m15:18:33.836481 [debug] [Thread-1 (]: Finished running node model.syncflow_dbt.my_first_dbt_model
+[0m15:18:33.837327 [debug] [Thread-4 (]: Began running node model.syncflow_dbt.my_second_dbt_model
+[0m15:18:33.837953 [info ] [Thread-4 (]: 4 of 4 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m15:18:33.838884 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.syncflow_dbt.my_second_dbt_model'
+[0m15:18:33.839363 [debug] [Thread-4 (]: Began compiling node model.syncflow_dbt.my_second_dbt_model
+[0m15:18:33.842449 [debug] [Thread-4 (]: Writing injected SQL for node "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.843381 [debug] [Thread-4 (]: Began executing node model.syncflow_dbt.my_second_dbt_model
+[0m15:18:33.847363 [debug] [Thread-4 (]: Writing runtime sql for node "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.848372 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.849058 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: BEGIN
+[0m15:18:33.849494 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:18:33.850317 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m15:18:33.850737 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.851195 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_second_dbt_model"} */
+
+  
+  create view "syncflow"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "syncflow"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m15:18:33.853080 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m15:18:33.856845 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.857358 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_second_dbt_model"} */
+alter view "syncflow"."main"."my_second_dbt_model" rename to "my_second_dbt_model__dbt_backup"
+[0m15:18:33.858221 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m15:18:33.861087 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.861503 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_second_dbt_model"} */
+alter view "syncflow"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m15:18:33.862309 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m15:18:33.863962 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: COMMIT
+[0m15:18:33.864392 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.864774 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: COMMIT
+[0m15:18:33.878328 [debug] [Thread-4 (]: SQL status: OK in 0.013 seconds
+[0m15:18:33.881137 [debug] [Thread-4 (]: Using duckdb connection "model.syncflow_dbt.my_second_dbt_model"
+[0m15:18:33.881662 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.my_second_dbt_model"} */
+
+      drop view if exists "syncflow"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m15:18:33.889372 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m15:18:33.890933 [debug] [Thread-4 (]: On model.syncflow_dbt.my_second_dbt_model: Close
+[0m15:18:33.891501 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fa912401-6bff-40de-9ca3-106a5de8355a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32BDB3B50>]}
+[0m15:18:33.892154 [info ] [Thread-4 (]: 4 of 4 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.05s]
+[0m15:18:33.893114 [debug] [Thread-4 (]: Finished running node model.syncflow_dbt.my_second_dbt_model
+[0m15:18:33.894921 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:33.895329 [debug] [MainThread]: On master: BEGIN
+[0m15:18:33.895771 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:18:33.896543 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:18:33.896914 [debug] [MainThread]: On master: COMMIT
+[0m15:18:33.897253 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:33.897579 [debug] [MainThread]: On master: COMMIT
+[0m15:18:33.898128 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:18:33.898475 [debug] [MainThread]: On master: Close
+[0m15:18:33.898919 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:18:33.899230 [debug] [MainThread]: Connection 'create_syncflow_main' was properly closed.
+[0m15:18:33.899529 [debug] [MainThread]: Connection 'list_syncflow_main' was properly closed.
+[0m15:18:33.899845 [debug] [MainThread]: Connection 'model.syncflow_dbt.stg_users' was properly closed.
+[0m15:18:33.900137 [debug] [MainThread]: Connection 'model.syncflow_dbt.stg_events' was properly closed.
+[0m15:18:33.900431 [debug] [MainThread]: Connection 'model.syncflow_dbt.my_first_dbt_model' was properly closed.
+[0m15:18:33.900721 [debug] [MainThread]: Connection 'model.syncflow_dbt.my_second_dbt_model' was properly closed.
+[0m15:18:33.901126 [info ] [MainThread]: 
+[0m15:18:33.901726 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 0.66 seconds (0.66s).
+[0m15:18:33.903374 [debug] [MainThread]: Command end result
+[0m15:18:33.931820 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m15:18:33.935030 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m15:18:33.941675 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\run_results.json
+[0m15:18:33.942078 [info ] [MainThread]: 
+[0m15:18:33.942660 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:18:33.943214 [info ] [MainThread]: 
+[0m15:18:33.943805 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m15:18:33.944791 [debug] [MainThread]: Command `dbt run` succeeded at 15:18:33.944659 after 2.34 seconds
+[0m15:18:33.945211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32B228C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A323A09A20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A32B9174D0>]}
+[0m15:18:33.945717 [debug] [MainThread]: Flushing usage events
+[0m15:18:34.786190 [debug] [MainThread]: An error was encountered while trying to flush usage events

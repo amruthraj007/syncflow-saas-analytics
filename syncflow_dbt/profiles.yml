@@ -1,0 +1,8 @@
+
+syncflow_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'D:/SaaS_Analytics_Portfolio/syncflow_analytics/data/syncflow.db' # This points to the DB you generated
+      threads: 4
