@@ -2,18 +2,25 @@ version: 2
 
 models:
   - name: stg_users
+    description: "Cleaned list of users who have signed up for the SyncFlow free trial."
     columns:
       - name: user_id
+        description: "Primary key for the user."
         tests:
           - unique
           - not_null
-      - name: email_username
+      - name: email_domain
+        description: "The domain part of the user's email, used to identify corporate leads (ICP)."
         tests:
           - not_null
 
   - name: stg_events
+    description: "Atomic event logs of user interactions within the SyncFlow platform."
     columns:
       - name: event_id
+        description: "Primary key for the event."
         tests:
           - unique
           - not_null
+      - name: event_type
+        description: "The specific action taken (e.g., project_created, teammate_invited)."

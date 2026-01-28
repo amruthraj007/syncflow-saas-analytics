@@ -2,26 +2,33 @@ version: 2
 
 sources:
   - name: syncflow_raw
-    schema: main # DuckDB default schema
+    description: "Raw data ingested from the SyncFlow application database. Contains event-level telemetry and user profile data."
+    schema: main
     tables:
       - name: raw_users
+        description: "Source table containing user demographic data collected at sign-up."
         columns:
           - name: user_id
+            description: "Unique identifier for the user. Matches user_id in raw_events."
             tests:
-             - not_null
-             - unique
+              - unique
+              - not_null
           - name: email
+            description: "Primary email address provided by the user."
             tests:
-             - not_null
+              - not_null
+
       - name: raw_events
+        description: "High-volume event stream capturing user interactions with the product."
         columns:
           - name: event_id
+            description: "Unique identifier for each individual action (UUID)."
             tests:
-             - not_null
-             - unique
+              - unique
+              - not_null
           - name: user_id
+            description: "Foreign key linking the event to a specific user."
             tests:
-             - relationships:
+              - relationships:
                   field: user_id
                   to: source('syncflow_raw', 'raw_users')
-                  
