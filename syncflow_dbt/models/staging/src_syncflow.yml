@@ -5,4 +5,23 @@ sources:
     schema: main # DuckDB default schema
     tables:
       - name: raw_users
+        columns:
+          - name: user_id
+            tests:
+             - not_null
+             - unique
+          - name: email
+            tests:
+             - not_null
       - name: raw_events
+        columns:
+          - name: event_id
+            tests:
+             - not_null
+             - unique
+          - name: user_id
+            tests:
+             - relationships:
+                  field: user_id
+                  to: source('syncflow_raw', 'raw_users')
+                  
