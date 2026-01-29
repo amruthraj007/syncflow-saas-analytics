@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_user_activities
+    description: "User-level activity aggregates used for PQL scoring."
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_users')
+              field: user_id

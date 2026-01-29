@@ -3550,3 +3550,427 @@ KeyboardInterrupt
 [0m17:01:40.315018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230B94A950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230B94A750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002230B8FBA70>]}
 [0m17:01:40.315987 [debug] [MainThread]: Flushing usage events
 [0m17:01:41.211887 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:00:12.006946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081D51CD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081E67BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081E67BB10>]}
+
+
+============================== 20:00:12.051709 | 43ba96ce-de5a-40af-8741-94f9a0dd228b ==============================
+[0m20:00:12.051709 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:00:12.052577 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m20:00:13.431764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081D9A9220>]}
+[0m20:00:13.510655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081F74D590>]}
+[0m20:00:13.578526 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m20:00:14.424366 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m20:00:14.633143 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m20:00:14.633892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081FB32C50>]}
+[0m20:00:17.713383 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'syncflow_raw_raw_events' in package 'syncflow_dbt'
+(models\staging\src_syncflow.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m20:00:17.722664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081FD0FC50>]}
+[0m20:00:17.854892 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.syncflow_dbt.example
+[0m20:00:17.867772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081FF68BB0>]}
+[0m20:00:17.973147 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m20:00:18.018503 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m20:00:18.151305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081FBFF110>]}
+[0m20:00:18.151913 [info ] [MainThread]: Found 3 models, 11 data tests, 2 sources, 472 macros
+[0m20:00:18.152514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081FEA6510>]}
+[0m20:00:18.161431 [info ] [MainThread]: 
+[0m20:00:18.162274 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:00:18.163119 [info ] [MainThread]: 
+[0m20:00:18.164064 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:00:18.170711 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow'
+[0m20:00:22.246765 [debug] [ThreadPool]: Using duckdb connection "list_syncflow"
+[0m20:00:22.247244 [debug] [ThreadPool]: On list_syncflow: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "list_syncflow"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"syncflow"'
+    
+  
+  
+[0m20:00:22.247590 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:00:22.668604 [debug] [ThreadPool]: SQL status: OK in 0.421 seconds
+[0m20:00:22.688204 [debug] [ThreadPool]: On list_syncflow: Close
+[0m20:00:22.689049 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_syncflow, now create_syncflow_main)
+[0m20:00:22.696207 [debug] [ThreadPool]: Creating schema "database: "syncflow"
+schema: "main"
+"
+[0m20:00:22.703048 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m20:00:22.703469 [debug] [ThreadPool]: On create_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "create_syncflow_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='syncflow'
+        and type='sqlite'
+    
+  
+[0m20:00:22.703809 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:00:22.705937 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m20:00:22.707429 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m20:00:22.707785 [debug] [ThreadPool]: On create_syncflow_main: BEGIN
+[0m20:00:22.708686 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:00:22.709052 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m20:00:22.709408 [debug] [ThreadPool]: On create_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "create_syncflow_main"} */
+
+    
+    
+        create schema if not exists "syncflow"."main"
+    
+[0m20:00:22.712285 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:00:22.714018 [debug] [ThreadPool]: On create_syncflow_main: COMMIT
+[0m20:00:22.714428 [debug] [ThreadPool]: Using duckdb connection "create_syncflow_main"
+[0m20:00:22.714757 [debug] [ThreadPool]: On create_syncflow_main: COMMIT
+[0m20:00:22.716118 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:00:22.716488 [debug] [ThreadPool]: On create_syncflow_main: Close
+[0m20:00:22.726724 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow_main'
+[0m20:00:22.732617 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m20:00:22.733031 [debug] [ThreadPool]: On list_syncflow_main: BEGIN
+[0m20:00:22.734005 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:00:22.734760 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:00:22.735112 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m20:00:22.735456 [debug] [ThreadPool]: On list_syncflow_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "connection_name": "list_syncflow_main"} */
+select
+      'syncflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'syncflow'
+  
+[0m20:00:22.876863 [debug] [ThreadPool]: SQL status: OK in 0.141 seconds
+[0m20:00:22.878784 [debug] [ThreadPool]: On list_syncflow_main: ROLLBACK
+[0m20:00:22.930188 [debug] [ThreadPool]: Failed to rollback 'list_syncflow_main'
+[0m20:00:22.930625 [debug] [ThreadPool]: On list_syncflow_main: Close
+[0m20:00:22.932945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002082004F1D0>]}
+[0m20:00:22.933463 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:00:22.933799 [debug] [MainThread]: On master: BEGIN
+[0m20:00:22.934198 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:00:22.934947 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:00:22.935328 [debug] [MainThread]: On master: COMMIT
+[0m20:00:22.935676 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:00:22.936002 [debug] [MainThread]: On master: COMMIT
+[0m20:00:22.936612 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:00:22.936981 [debug] [MainThread]: On master: Close
+[0m20:00:22.943900 [debug] [Thread-1 (]: Began running node model.syncflow_dbt.stg_events
+[0m20:00:22.944448 [debug] [Thread-2 (]: Began running node model.syncflow_dbt.stg_users
+[0m20:00:22.945031 [info ] [Thread-1 (]: 1 of 3 START sql view model main.stg_events .................................... [RUN]
+[0m20:00:22.946276 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_events'
+[0m20:00:22.946698 [debug] [Thread-1 (]: Began compiling node model.syncflow_dbt.stg_events
+[0m20:00:22.945603 [info ] [Thread-2 (]: 2 of 3 START sql view model main.stg_users ..................................... [RUN]
+[0m20:00:22.956131 [debug] [Thread-1 (]: Writing injected SQL for node "model.syncflow_dbt.stg_events"
+[0m20:00:22.957523 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.syncflow_dbt.stg_users'
+[0m20:00:22.958713 [debug] [Thread-2 (]: Began compiling node model.syncflow_dbt.stg_users
+[0m20:00:22.962797 [debug] [Thread-2 (]: Writing injected SQL for node "model.syncflow_dbt.stg_users"
+[0m20:00:22.963651 [debug] [Thread-1 (]: Began executing node model.syncflow_dbt.stg_events
+[0m20:00:22.997079 [debug] [Thread-2 (]: Began executing node model.syncflow_dbt.stg_users
+[0m20:00:23.001641 [debug] [Thread-1 (]: Writing runtime sql for node "model.syncflow_dbt.stg_events"
+[0m20:00:23.005343 [debug] [Thread-2 (]: Writing runtime sql for node "model.syncflow_dbt.stg_users"
+[0m20:00:23.006544 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m20:00:23.007034 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: BEGIN
+[0m20:00:23.007426 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:00:23.008285 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m20:00:23.008726 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: BEGIN
+[0m20:00:23.009124 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:00:23.009779 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m20:00:23.010183 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m20:00:23.010590 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+
+  
+  create view "syncflow"."main"."stg_users__dbt_tmp" as (
+    with source as (
+    select * from "syncflow"."main"."raw_users"
+),
+
+renamed as (
+    select
+        user_id,
+        split_part(email, '@', 2) as email_domain,
+        company_size,
+        signup_at as signed_up_at,
+    from source
+)
+select * from renamed
+  );
+
+[0m20:00:23.011512 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m20:00:23.012111 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m20:00:23.012606 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+
+  
+  create view "syncflow"."main"."stg_events__dbt_tmp" as (
+    with source as (
+    select * from "syncflow"."main"."raw_events"
+),
+renamed as (
+    select
+        event_id,
+        user_id,
+        event_type,
+        event_time as occurred_at,
+    from source
+)
+select * from renamed
+  );
+
+[0m20:00:23.013385 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m20:00:23.019754 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m20:00:23.020214 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+alter view "syncflow"."main"."stg_users" rename to "stg_users__dbt_backup"
+[0m20:00:23.020653 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m20:00:23.024478 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m20:00:23.024917 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+alter view "syncflow"."main"."stg_events" rename to "stg_events__dbt_backup"
+[0m20:00:23.025525 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m20:00:23.031869 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m20:00:23.032338 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+alter view "syncflow"."main"."stg_users__dbt_tmp" rename to "stg_users"
+[0m20:00:23.032998 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m20:00:23.035906 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m20:00:23.036467 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m20:00:23.037035 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+alter view "syncflow"."main"."stg_events__dbt_tmp" rename to "stg_events"
+[0m20:00:23.050168 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: COMMIT
+[0m20:00:23.050937 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m20:00:23.051405 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: COMMIT
+[0m20:00:23.052050 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:00:23.054021 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: COMMIT
+[0m20:00:23.054507 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m20:00:23.054910 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: COMMIT
+[0m20:00:23.076662 [debug] [Thread-2 (]: SQL status: OK in 0.025 seconds
+[0m20:00:23.083612 [debug] [Thread-2 (]: Using duckdb connection "model.syncflow_dbt.stg_users"
+[0m20:00:23.084078 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_users"} */
+
+      drop view if exists "syncflow"."main"."stg_users__dbt_backup" cascade
+    
+[0m20:00:23.087616 [debug] [Thread-1 (]: SQL status: OK in 0.032 seconds
+[0m20:00:23.090096 [debug] [Thread-1 (]: Using duckdb connection "model.syncflow_dbt.stg_events"
+[0m20:00:23.090546 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.stg_events"} */
+
+      drop view if exists "syncflow"."main"."stg_events__dbt_backup" cascade
+    
+[0m20:00:23.098815 [debug] [Thread-2 (]: SQL status: OK in 0.014 seconds
+[0m20:00:23.101498 [debug] [Thread-2 (]: On model.syncflow_dbt.stg_users: Close
+[0m20:00:23.104120 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081D934F50>]}
+[0m20:00:23.104940 [info ] [Thread-2 (]: 2 of 3 OK created sql view model main.stg_users ................................ [[32mOK[0m in 0.15s]
+[0m20:00:23.105814 [debug] [Thread-2 (]: Finished running node model.syncflow_dbt.stg_users
+[0m20:00:23.110119 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m20:00:23.111689 [debug] [Thread-1 (]: On model.syncflow_dbt.stg_events: Close
+[0m20:00:23.112300 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081D927D50>]}
+[0m20:00:23.112958 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.stg_events ............................... [[32mOK[0m in 0.17s]
+[0m20:00:23.113799 [debug] [Thread-1 (]: Finished running node model.syncflow_dbt.stg_events
+[0m20:00:23.114559 [debug] [Thread-3 (]: Began running node model.syncflow_dbt.int_user_activities
+[0m20:00:23.115117 [info ] [Thread-3 (]: 3 of 3 START sql table model main.int_user_activities .......................... [RUN]
+[0m20:00:23.115922 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.syncflow_dbt.int_user_activities'
+[0m20:00:23.116370 [debug] [Thread-3 (]: Began compiling node model.syncflow_dbt.int_user_activities
+[0m20:00:23.119365 [debug] [Thread-3 (]: Writing injected SQL for node "model.syncflow_dbt.int_user_activities"
+[0m20:00:23.120920 [debug] [Thread-3 (]: Began executing node model.syncflow_dbt.int_user_activities
+[0m20:00:23.146119 [debug] [Thread-3 (]: Writing runtime sql for node "model.syncflow_dbt.int_user_activities"
+[0m20:00:23.168828 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.int_user_activities"
+[0m20:00:23.169319 [debug] [Thread-3 (]: On model.syncflow_dbt.int_user_activities: BEGIN
+[0m20:00:23.169739 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:00:23.170673 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m20:00:23.171232 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.int_user_activities"
+[0m20:00:23.171674 [debug] [Thread-3 (]: On model.syncflow_dbt.int_user_activities: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.int_user_activities"} */
+
+  
+    
+    
+
+    create  table
+      "syncflow"."main"."int_user_activities__dbt_tmp"
+  
+    as (
+      with events as (
+    -- Aggregate first to keep the data volume low
+    select 
+        user_id,
+        count(case when event_type = 'project_created' then 1 end) as total_project_creations,
+        count(case when event_type = 'task_added' then 1 end) as total_tasks_added,
+        count(case when event_type = 'teammate_invited' then 1 end) as total_teammate_invites,
+        count(case when event_type = 'integration_connected' then 1 end) as total_integration_connected,
+        min(occurred_at) as first_activity_at,
+        max(occurred_at) as last_activity_at
+    from "syncflow"."main"."stg_events"
+    group by 1
+),
+
+final as (
+    -- Left join ensures we keep users with 0 activity
+    select
+        u.user_id,
+        coalesce(e.total_project_creations, 0) as total_project_creations,
+        coalesce(e.total_tasks_added, 0) as total_tasks_added,
+        coalesce(e.total_teammate_invites, 0) as total_teammate_invites,
+        coalesce(e.total_integration_connected, 0) as total_integration_connected,
+        e.first_activity_at,
+        e.last_activity_at
+    from "syncflow"."main"."stg_users" u
+    left join events e on u.user_id = e.user_id
+)
+
+select * from final
+    );
+  
+  
+[0m20:00:23.235287 [debug] [Thread-3 (]: SQL status: OK in 0.063 seconds
+[0m20:00:23.238351 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.int_user_activities"
+[0m20:00:23.238772 [debug] [Thread-3 (]: On model.syncflow_dbt.int_user_activities: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.int_user_activities"} */
+alter table "syncflow"."main"."int_user_activities__dbt_tmp" rename to "int_user_activities"
+[0m20:00:23.239638 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m20:00:23.244799 [debug] [Thread-3 (]: On model.syncflow_dbt.int_user_activities: COMMIT
+[0m20:00:23.245323 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.int_user_activities"
+[0m20:00:23.245710 [debug] [Thread-3 (]: On model.syncflow_dbt.int_user_activities: COMMIT
+[0m20:00:23.269409 [debug] [Thread-3 (]: SQL status: OK in 0.023 seconds
+[0m20:00:23.273158 [debug] [Thread-3 (]: Using duckdb connection "model.syncflow_dbt.int_user_activities"
+[0m20:00:23.273628 [debug] [Thread-3 (]: On model.syncflow_dbt.int_user_activities: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "syncflow_dbt", "target_name": "dev", "node_id": "model.syncflow_dbt.int_user_activities"} */
+
+      drop table if exists "syncflow"."main"."int_user_activities__dbt_backup" cascade
+    
+[0m20:00:23.274417 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m20:00:23.275837 [debug] [Thread-3 (]: On model.syncflow_dbt.int_user_activities: Close
+[0m20:00:23.276409 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '43ba96ce-de5a-40af-8741-94f9a0dd228b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020820418600>]}
+[0m20:00:23.277067 [info ] [Thread-3 (]: 3 of 3 OK created sql table model main.int_user_activities ..................... [[32mOK[0m in 0.16s]
+[0m20:00:23.277994 [debug] [Thread-3 (]: Finished running node model.syncflow_dbt.int_user_activities
+[0m20:00:23.279962 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:00:23.280442 [debug] [MainThread]: On master: BEGIN
+[0m20:00:23.280835 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:00:23.281652 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:00:23.282069 [debug] [MainThread]: On master: COMMIT
+[0m20:00:23.282470 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:00:23.282916 [debug] [MainThread]: On master: COMMIT
+[0m20:00:23.283627 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:00:23.284011 [debug] [MainThread]: On master: Close
+[0m20:00:23.284464 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:00:23.284913 [debug] [MainThread]: Connection 'create_syncflow_main' was properly closed.
+[0m20:00:23.285412 [debug] [MainThread]: Connection 'list_syncflow_main' was properly closed.
+[0m20:00:23.285725 [debug] [MainThread]: Connection 'model.syncflow_dbt.stg_events' was properly closed.
+[0m20:00:23.286020 [debug] [MainThread]: Connection 'model.syncflow_dbt.stg_users' was properly closed.
+[0m20:00:23.286313 [debug] [MainThread]: Connection 'model.syncflow_dbt.int_user_activities' was properly closed.
+[0m20:00:23.286722 [info ] [MainThread]: 
+[0m20:00:23.287300 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.12 seconds (5.12s).
+[0m20:00:23.288608 [debug] [MainThread]: Command end result
+[0m20:00:23.316733 [debug] [MainThread]: Wrote artifact WritableManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\manifest.json
+[0m20:00:23.320791 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\semantic_manifest.json
+[0m20:00:23.327750 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\SaaS_Analytics_Portfolio\syncflow_analytics\syncflow_dbt\target\run_results.json
+[0m20:00:23.328172 [info ] [MainThread]: 
+[0m20:00:23.328777 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:00:23.329539 [info ] [MainThread]: 
+[0m20:00:23.330368 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m20:00:23.331250 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m20:00:23.332292 [debug] [MainThread]: Command `dbt run` succeeded at 20:00:23.332145 after 11.54 seconds
+[0m20:00:23.332731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002081E010350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020820407EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020820407A10>]}
+[0m20:00:23.333146 [debug] [MainThread]: Flushing usage events
+[0m20:00:24.506341 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:18:05.308803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B952F5CD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9540B3ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9540B3B10>]}
+
+
+============================== 21:18:05.351603 | 63ae19fe-72b1-446d-acb4-914cbe700378 ==============================
+[0m21:18:05.351603 [info ] [MainThread]: Running with dbt=1.11.2
+[0m21:18:05.354929 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt docs generate --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m21:18:06.733064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '63ae19fe-72b1-446d-acb4-914cbe700378', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9533ED220>]}
+[0m21:18:06.836577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '63ae19fe-72b1-446d-acb4-914cbe700378', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9541BD590>]}
+[0m21:18:06.877531 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m21:18:07.795713 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m21:18:08.948695 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m21:18:08.949382 [debug] [MainThread]: Partial parsing: added file: syncflow_dbt://models\intermediate\int_syncflow.yml
+[0m21:18:09.173292 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'int_user_activities' in package 'syncflow_dbt'
+(models\intermediate\int_syncflow.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m21:18:09.174115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '63ae19fe-72b1-446d-acb4-914cbe700378', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B954177250>]}
+[0m21:18:09.333662 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.syncflow_dbt.example
+[0m21:18:09.349043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '63ae19fe-72b1-446d-acb4-914cbe700378', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B95542F890>]}
+[0m21:18:09.832390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '63ae19fe-72b1-446d-acb4-914cbe700378', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B95522AEB0>]}
+[0m21:18:09.833170 [info ] [MainThread]: Found 3 models, 14 data tests, 2 sources, 472 macros
+[0m21:18:09.834191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63ae19fe-72b1-446d-acb4-914cbe700378', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B94FF0E680>]}
+[0m21:18:09.840273 [info ] [MainThread]: 
+[0m21:18:09.841324 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:18:09.842711 [info ] [MainThread]: 
+[0m21:18:09.844573 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:18:09.858894 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_syncflow_main'
+[0m21:18:13.038084 [debug] [ThreadPool]: Using duckdb connection "list_syncflow_main"
+[0m21:18:13.038580 [debug] [ThreadPool]: On list_syncflow_main: BEGIN
+[0m21:18:13.038974 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:18:13.385253 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: BEGIN
+[0m21:18:13.387369 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m21:18:13.392513 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:18:13.394118 [debug] [MainThread]: Connection 'list_syncflow_main' was properly closed.
+[0m21:18:13.396458 [error] [MainThread]: Encountered an error:
+Runtime Error
+  IO Error: Cannot open file "d:\saas_analytics_portfolio\syncflow_analytics\data\syncflow.db": The process cannot access the file because it is being used by another process.
+  
+  File is already open in 
+  C:\Users\MYPC\AppData\Local\DBeaver\dbeaver.exe (PID 16496)
+[0m21:18:13.399931 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m21:18:13.406546 [debug] [MainThread]: Command `dbt docs generate` failed at 21:18:13.405630 after 8.41 seconds
+[0m21:18:13.408604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B953E3BE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9558F2D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B955B38050>]}
+[0m21:18:13.410604 [debug] [MainThread]: Flushing usage events
+[0m21:18:14.588642 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:18:31.894424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238097CCD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002380A91FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002380A91FB10>]}
+
+
+============================== 21:18:31.909569 | 807d38ac-7d2b-49fc-ae45-2b14b122b3a8 ==============================
+[0m21:18:31.909569 [info ] [MainThread]: Running with dbt=1.11.2
+[0m21:18:31.912336 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'log_path': 'D:\\SaaS_Analytics_Portfolio\\syncflow_analytics\\syncflow_dbt\\logs'}
+[0m21:18:32.380723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '807d38ac-7d2b-49fc-ae45-2b14b122b3a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023809C5D220>]}
+[0m21:18:32.461023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '807d38ac-7d2b-49fc-ae45-2b14b122b3a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002380AA316A0>]}
+[0m21:19:14.369457 [error] [MainThread]: Encountered an error:
+
+[0m21:19:14.550786 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+  File "D:\SaaS_Analytics_Portfolio\syncflow_analytics\venv\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\MYPC\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "C:\Users\MYPC\AppData\Local\Programs\Python\Python313\Lib\selectors.py", line 314, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MYPC\AppData\Local\Programs\Python\Python313\Lib\selectors.py", line 305, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m21:19:14.557002 [debug] [MainThread]: Command `dbt docs serve` failed at 21:19:14.556294 after 42.86 seconds
+[0m21:19:14.559036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002380BD2A950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002380BD2A750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002380BCDBA70>]}
+[0m21:19:14.561200 [debug] [MainThread]: Flushing usage events
+[0m21:19:15.668476 [debug] [MainThread]: An error was encountered while trying to flush usage events

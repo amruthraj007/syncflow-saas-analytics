@@ -33,6 +33,8 @@ models:
   syncflow_dbt:
     staging:
       +materialized: view
+    intermediate:
+      +materialized: table
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
